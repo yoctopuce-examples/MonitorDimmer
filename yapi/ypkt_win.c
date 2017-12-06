@@ -288,7 +288,7 @@ static int yReserveGlobalAccess(yContextSt *ctx, char * errmsg)
     DWORD value_length = 512;
     int retval;
     s64 pid;
-    HKEY key;
+    HKEY key = NULL;
     LONG res;
 
     if (ctx->registry.hREG != NULL) {
